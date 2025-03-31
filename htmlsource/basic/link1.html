@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+        link 태그
+        <a>
+        href : 연결할 사이트 주소 or 파일(다운로드) or 이메일
+          - 외부주소(다른사이트 url) or 내부주소 (같은사이트 내의 다른 페이지)
+            1) 상대주소 : 같은 사이트 내의 다른 페이지 ( . : 현재경로, .. : 상위경로)
+            2) 절대주소 : https://www.naver.com/, c:/download/
+          - 파일을 연결할 경우
+            - 브라우저가 해석이 가능한 파일이면 바로 열림
+              -download : 해당 속성을 이용하여 열지않고 다운로드 가능
+            - 해석이 불가능 할 경우 다운로드 창이 나옴
+
+        target : 연결할 사이트를 어디에서 열 것인가?
+          - _self : default (현재 창에서 열림)
+          - _black : 새창에서 열림
+
+        unvisited link (방문 안한 링크) : 밑줄, blue
+        visited link (방문 한 링크) : 밑줄, purple
+        active link (링크를 누를 때) : 밑줄, red
+    -->
+    <ul>
+      <li>
+        <a href="https://www.naver.com/" target="_blank" title="네이버로 갑시다"
+          >네이버</a
+        >
+      </li>
+      <li><a href="mailto:admin@gmail.com">이메일 보내기</a></li>
+    </ul>
+  </body>
+</html>
