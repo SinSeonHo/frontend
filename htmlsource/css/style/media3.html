@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 전체 여백 0으로 세팅 */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      /* body 배경색 : #ecf0f1 */
+      body {
+        background-color: #ecf0f1;
+      }
+      /* wrapper : max-width:60rem, width:100% */
+      .wrapper {
+        max-width: 60rem;
+        width: 100%;
+        margin: 2rem;
+      }
+      /* flexbg : flex 컨테이너 */
+      .flexbg {
+        display: flex;
+      }
+      /* main : 배경색 흰색, padding 25px, order 2 */
+      .flexbg main {
+        background-color: white;
+        padding: 25px;
+        order: 2;
+      }
+      /* left : 배경색 #3498db, order 1 */
+      .flexbg .left {
+        background-color: #3498db;
+        order: 1;
+      }
+      /* right : 배경색 #34495e, order 3 */
+      .flexbg .right {
+        background-color: #34495e;
+        order: 3;
+      }
+      .flexbg .sidebar {
+        padding: 25px;
+        width: 20%;
+      }
+
+      /* 481 ~ 768 */
+      @media screen and (max-width: 768px) {
+        .flexbg {
+          flex-wrap: wrap;
+        }
+        .flexbg .left {
+          order: 2;
+        }
+
+        .flexbg main {
+          width: 100%;
+          order: 1;
+        }
+        .flexbg .sidebar {
+          width: 50%;
+        }
+      }
+      /* 0 ~ 480 */
+      @media screen and (max-width: 480px) {
+        .flexbg {
+          flex-wrap: wrap;
+        }
+        .flexbg .left {
+          order: 2;
+        }
+
+        .flexbg main {
+          width: 100%;
+          order: 1;
+        }
+        .flexbg .sidebar {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper flexbg">
+      <main>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quas error, beatae vero doloribus, voluptas
+          assumenda ea est quo dicta saepe alias asperiores voluptates cumque molestias eum voluptate explicabo
+          provident aut ipsum voluptatem esse amet. Rem aliquid numquam adipisci exercitationem dolor debitis maiores
+          quas tempore quod, architecto maxime neque unde inventore repudiandae repellendus nam quibusdam ullam harum
+          impedit possimus? Rem nostrum ratione aliquam laudantium consectetur, perferendis adipisci modi quod qui ipsum
+          reiciendis tempore, odit et ex animi facere laborum neque cumque explicabo necessitatibus asperiores unde
+          obcaecati? Sint quasi eveniet sequi perferendis quae provident molestias cupiditate cumque neque, id tempora
+          molestiae?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quas error, beatae vero doloribus, voluptas
+          assumenda ea est quo dicta saepe alias asperiores voluptates cumque molestias eum voluptate explicabo
+          provident aut ipsum voluptatem esse amet. Rem aliquid numquam adipisci exercitationem dolor debitis maiores
+          quas tempore quod, architecto maxime neque unde inventore repudiandae repellendus nam quibusdam ullam harum
+          impedit possimus? Rem nostrum ratione aliquam laudantium consectetur, perferendis adipisci modi quod qui ipsum
+          reiciendis tempore, odit et ex animi facere laborum neque cumque explicabo necessitatibus asperiores unde
+          obcaecati? Sint quasi eveniet sequi perferendis quae provident molestias cupiditate cumque neque, id tempora
+          molestiae?
+        </p>
+      </main>
+      <aside class="sidebar left">
+        <p>You might have some latest posts here on the left</p>
+      </aside>
+      <aside class="sidebar right">
+        <p>And some other widgets here on the right</p>
+      </aside>
+    </div>
+  </body>
+</html>

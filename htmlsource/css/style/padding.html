@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        font-size: 24px;
+        background-color: brown;
+        /* width: 100%; block은 기본 100%상태 */
+        /* height: 100px; */
+        /* padding: 20px; 모든방향에 20px만큼 */
+        padding: 20px;
+        /* padding(안쪽여백): 시계방향(top, right, bottom, left) 순으로 */
+        /* padding: 10px 5px 15px 10px; */
+        /* padding: 10px 15px;  top, bottom은 10px right, left는 15px */
+        /* padding: 10px 15px 20px; top10 right15 bottom20 left15 */
+      }
+      div {
+        margin: 20px; /* 바깥쪽 여백: 시계방향(top, right, bottom, left) 순으로 */
+        text-align: center;
+      }
+      div a {
+        width: 40px;
+        height: 40px;
+        background-color: blue;
+        color: white;
+        display: inline-block;
+        text-decoration: none;
+        line-height: 40px;
+      }
+      span {
+        background-color: beige;
+        /*
+          width: 100%;
+          height: 100px;
+        */
+        padding: 10px;
+        display: inline-block;
+      }
+      p:nth-of-type(2) {
+        /* display: none; 위치까지 통째로 숨김 */
+        visibility: hidden; /* 위치는 그대로차지하고 눈에보이는 요소만 숨김 */
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+        block(p,div) : 한 행 다 사용 / width : 기본 100%, height : 0 => 내용만큼 사용, 지정가능
+        inline(a,span) : 내용만큼만 사용 / width, height 를 가질 수 없음 / 상,하 padding 가질 수 없음
+
+        display : inline, block, inline-block(인라인과 블록 둘다 가지게됨), none(요소 감춤)
+    -->
+    <p>block level</p>
+    <span>inline level</span>
+    <span>inline level2</span>
+    <div>
+      <a href="">1</a>
+      <a href="">2</a>
+      <a href="">3</a>
+      <a href="">4</a>
+      <a href="">5</a>
+    </div>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore ipsa, magni ratione facere animi cupiditate quia
+      sed enim cumque numquam, et modi, vel accusantium autem aperiam? Doloremque soluta dolorum eligendi.
+    </p>
+    <div>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id repudiandae earum officiis, assumenda quibusdam quasi
+      architecto, illo consectetur sapiente libero perspiciatis veritatis repellat eum non rerum mollitia praesentium
+      doloribus corporis!
+    </div>
+  </body>
+</html>

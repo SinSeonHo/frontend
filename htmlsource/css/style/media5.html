@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 전체 여백 0 */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      /*  body : 배경색 #333338, 글자색 #444 */
+      body {
+        background-color: #333338;
+        color: #444;
+      }
+      /* container : felx */
+      .container {
+        display: flex;
+      }
+      /* sidebar : 바깥여백 10px, 안쪽여백 6px, 배경색 #eee,  */
+      .sidebar {
+        margin: 10px;
+        padding: 6px;
+        background-color: #eee;
+        display: flex;
+        flex-direction: column;
+      }
+      /* panel : 바깥여백 10px, 안쪽여백 20px, 배경색 #fff,  */
+      .panel {
+        margin: 10px;
+        padding: 20px;
+        background-color: #fff;
+      }
+      .sidebar .panel {
+        justify-content: space-between;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <section class="main-content">
+        <div class="panel">
+          <h1>Main Title</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus laboriosam neque aliquid aliquam ut
+            eveniet ducimus porro accusamus cum expedita possimus unde voluptates, minima alias! Esse libero quia rem
+            mollitia!
+          </p>
+          <img src="../../image/bg.png" alt="" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, maxime cupiditate iure eaque esse
+            laboriosam? Repellat porro illum accusamus voluptatibus, repudiandae in ex quaerat dolorum sint nihil
+            voluptatum minus delectus, odit vitae ut quo aliquam rerum atque totam mollitia quasi debitis earum.
+            Delectus quibusdam sit quo saepe libero, aliquid fugit.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis cum explicabo voluptatibus quae harum delectus
+            autem. Officiis provident error optio beatae officia harum possimus nesciunt impedit? Nobis aliquid dicta
+            dolor.
+          </p>
+          <h3>Subtitle</h3>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque necessitatibus, blanditiis velit libero
+            assumenda, architecto vel facere officia, magni excepturi est. Explicabo illum officiis ipsam labore dicta,
+            veniam, deleniti quibusdam fugiat veritatis fuga culpa totam quae commodi reiciendis ipsum suscipit possimus
+            iste fugit nam voluptas tempora numquam corporis dolor ab.
+          </p>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque necessitatibus, blanditiis velit libero
+            assumenda, architecto vel facere officia, magni excepturi est. Explicabo illum officiis ipsam labore dicta,
+            veniam, deleniti quibusdam fugiat veritatis fuga culpa totam quae commodi reiciendis ipsum suscipit possimus
+            iste fugit nam voluptas tempora numquam corporis dolor ab.
+          </p>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque necessitatibus, blanditiis velit libero
+            assumenda, architecto vel facere officia, magni excepturi est. Explicabo illum officiis ipsam labore dicta,
+            veniam, deleniti quibusdam fugiat veritatis fuga culpa totam quae commodi reiciendis ipsum suscipit possimus
+            iste fugit nam voluptas tempora numquam corporis dolor ab.
+          </p>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque necessitatibus, blanditiis velit libero
+            assumenda, architecto vel facere officia, magni excepturi est. Explicabo illum officiis ipsam labore dicta,
+            veniam, deleniti quibusdam fugiat veritatis fuga culpa totam quae commodi reiciendis ipsum suscipit possimus
+            iste fugit nam voluptas tempora numquam corporis dolor ab.
+          </p>
+        </div>
+      </section>
+
+      <aside class="sidebar">
+        <div class="panel">
+          <h3>Item 1</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, saepe quasi nihil ipsam inventore vitae</p>
+        </div>
+        <div class="panel">
+          <h3>Item 2</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, saepe quasi nihil ipsam inventore vitae
+            alias nulla exercitationem cumque vero id nostrum suscipit eum unde atque distinctio est quae. Repellat.
+          </p>
+        </div>
+        <div class="panel">
+          <h3>Item 3</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, saepe quasi nihil ipsam inventore vitae
+            alias nulla exercitationem cumque vero id nostrum suscipit eum unde atque distinctio est quae. Repellat.
+          </p>
+        </div>
+        <div class="panel">
+          <h3>Item 4</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, saepe quasi nihil ipsam inventore vitae
+            alias nulla exercitationem cumque vero id nostrum suscipit eum unde atque distinctio est quae. Repellat.
+          </p>
+        </div>
+      </aside>
+    </div>
+  </body>
+</html>

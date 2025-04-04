@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 전체 : border까지 크기 포함 */
+      * {
+        box-sizing: border-box;
+      }
+
+      /* 컬럼 색상 : #aaa, #bbb, #ccc, #ddd, 내부공백 : 20px, width:25% */
+      .column {
+        padding: 20px;
+        width: 25%;
+      }
+      .row .column:nth-child(1) {
+        background-color: #aaa;
+      }
+      .row .column:nth-child(2) {
+        background-color: #bbb;
+      }
+      .row .column:nth-child(3) {
+        background-color: #ccc;
+      }
+      .row .column:nth-child(4) {
+        background-color: #ddd;
+      }
+      /* row : flex */
+      .row {
+        display: flex;
+      }
+
+      /* media : 992 */
+      @media screen and (max-width: 992px) {
+        .row {
+          flex-wrap: wrap;
+        }
+        .row .column {
+          width: 50%;
+        }
+      }
+
+      /* media : 600 */
+      @media screen and (max-width: 600px) {
+        .row {
+          flex-wrap: wrap;
+        }
+        .row .column {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis rem eum possimus, ea blanditiis dolore
+      doloremque facilis vitae. Totam fugit minima debitis recusandae, placeat accusantium amet maiores voluptates
+      veniam sapiente! In delectus placeat aperiam nostrum dolore quod quos, ea reiciendis ratione rerum quam
+      recusandae, natus nam perferendis nemo distinctio molestiae.
+    </p>
+    <div class="row">
+      <div class="column">
+        <h2>Column 1</h2>
+        <p>Some text...</p>
+      </div>
+      <div class="column">
+        <h2>Column 2</h2>
+        <p>Some text...</p>
+      </div>
+      <div class="column">
+        <h2>Column 3</h2>
+        <p>Some text...</p>
+      </div>
+      <div class="column">
+        <h2>Column 4</h2>
+        <p>Some text...</p>
+      </div>
+    </div>
+  </body>
+</html>

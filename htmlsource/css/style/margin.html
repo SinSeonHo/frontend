@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 부모 : 너비500, 높이300, 테두리4 실선 색상임의, */
+      /* 자식 : 높이200, 배경색 orange */
+      div.parent {
+        width: 600px;
+        height: 300px;
+        border: 4px solid red;
+      }
+      div.child {
+        /* width: 300px; */
+        max-width: 400px; /* 최대 너비를 넘어갈 수 없음 */
+        min-width: 200px; /* 최소 너비보다 작아질 수 없음 */
+        height: 200px;
+        background-color: orange;
+      }
+      .parent2 {
+        margin-top: 30px;
+        width: 400px;
+        height: 200px;
+        border: 4px solid tomato;
+      }
+      .child1 {
+        width: 100px;
+        height: 100px;
+        border: 4px solid black;
+        margin: 10px;
+      }
+      .parent3 {
+        margin-top: 50px;
+        /* border: 4px solid tomato; */
+      }
+      .child2 {
+        width: 100px;
+        height: 100px;
+        background-color: orange;
+        /* display: inline-block; */
+        float: left;
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+        block(p,div) : 한 행 다 사용 / width : 기본 100%, height : 0 => 내용만큼 사용, 지정가능
+        inline(a,span) : 내용만큼만 사용 / width, height 를 가질 수 없음 / 상,하 padding 가질 수 없음
+
+        display : inline, block, inline-block(인라인과 블록 둘다 가지게됨), none(요소 감춤)
+
+        margin 중복(병합) : margin의 특정 값들이 중복되어 합쳐지는 현상
+        1. 형제 요소들의 margin-top과 margin-bottom이 만났을 때
+        2. 부모 요소들의 margin-top과 자식 요소의 margin-top이 만났을 때
+        3. 부모 요소들의 margin-bottom과 자식 요소의 margin-bottom이 만났을 때
+        위 아래는 합쳐지나 좌우는 병합일어나지않음
+    -->
+    <div class="parent">
+      <div class="child"></div>
+    </div>
+    <div class="parent2">
+      <div class="child1"></div>
+      <div class="child1"></div>
+    </div>
+    <div class="parent3">
+      <div class="child2"></div>
+      <div class="child2"></div>
+      <div class="child2"></div>
+    </div>
+  </body>
+</html>

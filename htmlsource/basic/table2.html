@@ -4,84 +4,92 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>table2.html</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 700px;
+      }
+      th,
+      td {
+        border: 2px solid black;
+      }
+      th {
+        background-color: azure;
+      }
+      td {
+        font-family: sans-serif;
+        text-align: center;
+        font-weight: bold;
+        line-height: 1.5;
+      }
+      .col {
+        width: 500px;
+      }
+      .name {
+        width: 150px;
+      }
+      .birth {
+        width: 250px;
+      }
+      .img {
+        border: 0;
+        width: 150px;
+        height: 150px;
+      }
+      .head {
+        width: 160px;
+      }
+      .jumin {
+        padding: 10px;
+      }
+      .hak {
+        width: 300px;
+      }
+      .email,
+      .addr,
+      .phone {
+        text-align: left;
+        padding-left: 10px;
+      }
+    </style>
   </head>
   <body>
-    <table border="1" width="600">
+    <table>
       <tr>
-        <td rowspan="3">
-          <img src="../image/img3.jpg" alt="노홍철" border="0" width="150" height="150" />
-        </td>
-        <td colspan="4"><h2>이력서</h2></td>
+        <th rowspan="3" class="head">
+          <img src="../image/img3.jpg" alt="노홍철" class="img" />
+        </th>
+        <th colspan="4"><h2>이력서</h2></th>
       </tr>
       <tr>
-        <td rowspan="2">성명</td>
-        <td colspan="2" rowspan="2">&nbsp;</td>
-        <td>생년월일</td>
+        <td rowspan="2" class="name">성명</td>
+        <td colspan="2" rowspan="2" class="name">홍길동</td>
+        <td class="birth">생년월일</td>
       </tr>
       <tr>
-        <td>&nbsp;</td>
+        <td class="jumin">930603-1234567</td>
       </tr>
       <tr>
         <td>이메일</td>
-        <td colspan="4">&nbsp;</td>
+        <td colspan="4" class="email">hong123@naver.com</td>
       </tr>
       <tr>
         <td>현주소</td>
-        <td colspan="4">&nbsp;</td>
+        <td colspan="4" class="addr">서울시 송파구 강동구</td>
       </tr>
       <tr>
         <td>연락처</td>
-        <td colspan="4">&nbsp;</td>
+        <td colspan="4" class="phone">010-1234-5678</td>
       </tr>
       <tr>
         <td>기 간</td>
-        <td colspan="2">학력사항</td>
+        <td colspan="2" class="hak">학력사항</td>
         <td colspan="2">비고</td>
       </tr>
-    </table>
-    <br /><br /><br /><br />
-    <table border="1" width="600">
       <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
+        <td>2002.10.05</td>
+        <td colspan="2">OO 대학교 졸업</td>
+        <td colspan="2">컴퓨터 전공</td>
       </tr>
     </table>
   </body>
