@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #p1 {
+        /* display: none; <=> block */
+        /* visibility: hidden; <=> visible */
+      }
+    </style>
+  </head>
+  <body>
+    <p id="p1">This is a paragraph.</p>
+    <button type="button">요소 숨김</button>
+    <button type="button">요소 보이기</button>
+    <script>
+      // 요소 숨김 클릭 시 p1 숨기기
+      // 요소 보이기 클릭 시 p1 보이기
+      const btns = document.querySelectorAll("[type='button']");
+      const p = document.querySelector("#p1");
+      btns.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          // 어느 btn인지 구분
+          if (e.target.textContent === "요소 숨김") {
+            p.style.visibility = "hidden"; // p.style.display = "none";
+          } else {
+            p.style.visibility = "visible"; // p.style.display = "block";
+          }
+        });
+      });
+
+      array.forEach((element) => {});
+      // btns[0].addEventListener("click", () => {
+      //   p.style.visibility = "hidden";
+      // });
+      // btns[1].addEventListener("click", () => {
+      //   p.style.visibility = "visible";
+      // });
+    </script>
+  </body>
+</html>
+
+<!-- <script>
+  // h1 요소의 글자 색상 변경
+  const h1 = document.querySelector("h1");
+
+  // css 접근
+  h1.style.color = "red";
+  h1.style.fontSize = "40px";
+</script> -->

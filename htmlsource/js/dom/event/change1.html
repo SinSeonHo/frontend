@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" method="post">
+      <div>
+        <label for="">이름1</label>
+        <input type="text" name="name1" id="name1" value="ABCDEF" />
+      </div>
+      <div>
+        <label for="">이름2</label>
+        <input type="text" name="name2" id="name2" value="ABCDEF" />
+      </div>
+      <div>
+        <select name="fruit" id="fruit">
+          <option value="">과일선택</option>
+          <option value="사과">사과</option>
+          <option value="포도">포도</option>
+          <option value="딸기">딸기</option>
+          <option value="바나나">바나나</option>
+        </select>
+      </div>
+    </form>
+    <p>입력 필드를 벗어나면 소문자로 변경</p>
+    <script>
+      // change : 요소 변경이 끝나면 발생 (변경이 일어나야만 발생, 기본값은 이벤트발생X)
+      // input : 값을 수정할 때마다 바로 발생
+      // blur : 기본값에 대해서도 이벤트를 발생시킴
+      const name1 = document.querySelector("#name1");
+      const name2 = document.querySelector("#name2");
+
+      // 사용자가 입력값 가져와서 소문자로 변환 후 다시 보여주기
+      name1.addEventListener("change", (e) => (e.target.value = e.target.value.toLowerCase()));
+      //   name2.addEventListener("input", (e) => (e.target.value = e.target.value.toLowerCase()));
+      name2.addEventListener("blur", (e) => (e.target.value = e.target.value.toLowerCase()));
+
+      document.querySelector("#fruit").addEventListener("change", (e) => console.log(e.target.value));
+    </script>
+  </body>
+</html>

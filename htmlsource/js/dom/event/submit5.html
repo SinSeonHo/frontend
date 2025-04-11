@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>계산기</h3>
+
+    <form action="" method="post">
+      <input type="text" name="num1" id="num1" size="5" />
+      <select name="op" id="op">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+      </select>
+      <input type="text" name="num2" id="num2" size="5" />
+      =
+      <input type="text" name="result" id="result" size="15" />
+      <button type="submit">계산결과</button>
+    </form>
+
+    <script>
+      // 덧셈결과 버튼 클릭 시
+      // num1, num2 value를 가져와서 덧셈 후 결과값 result 안에 보여주기
+      document.querySelector("form").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const form = e.target;
+
+        // form.이름 으로 요소찾기
+        const num1 = form.num1;
+        const num2 = form.num2;
+        const result = form.result;
+        // const select = form.op;
+        // console.log(select.value);
+        if (isNaN(parseInt(num1.value)) || isNaN(parseInt(num2.value))) {
+          result.value = "계산 할 수 없습니다.";
+          return;
+        } else if (op.value === "+") {
+          result.value = parseInt(num1.value) + parseInt(num2.value);
+        } else if (op.value === "-") {
+          result.value = parseInt(num1.value) - parseInt(num2.value);
+        } else if (op.value === "*") {
+          result.value = parseInt(num1.value) * parseInt(num2.value);
+        } else if (op.value === "/") {
+          result.value = parseInt(num1.value) / parseInt(num2.value);
+        } else if (op.value === "%") {
+          result.value = parseInt(num1.value) % parseInt(num2.value);
+        }
+      });
+    </script>
+  </body>
+</html>

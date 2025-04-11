@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .alert-box {
+        background: skyblue;
+        padding: 20px;
+        color: white;
+        border-radius: 5px;
+        margin: 10px;
+        position: relative;
+        /* 알림창 처음에는 숨기기 */
+        display: none;
+      }
+      button {
+        border: 0;
+        border-radius: 10px;
+        padding: 10px;
+        background-color: rgb(54, 62, 228);
+        color: white;
+        cursor: pointer;
+      }
+      .close {
+        position: absolute;
+        right: 10px;
+        top: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="alert-box">
+      알림창
+      <span class="close">X</span>
+    </div>
+    <button class="show">버튼1</button>
+    <button class="show">버튼2</button>
+
+    <script>
+      // 버튼 1 클릭 시 알림창 -> 아이디를 입력하세요
+      // 버튼 2 클릭 시 알림창 -> 비밀번호를 입력해주세요
+      const alertbox = document.querySelector(".alert-box");
+      const btns = document.querySelectorAll(".show");
+
+      // btns[0].addEventListener("click", () => {
+      //   alertbox.textContent = "아이디를 입력하세요";
+      // });
+
+      // btns[1].addEventListener("click", () => {
+      //   alertbox.textContent = "비밀번호를 입력하세요";
+      // });
+
+      btns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          if (btn.textContent == "버튼1") {
+            alertbox.style.display = "block";
+            alertbox.firstChild.nodeValue = "아이디를 입력하세요";
+            // alertbox.textContent = "아이디를 입력하세요";
+            // alertbox.innerHTML = `"아이디를 입력하세요" <span class="close">X</span>`;
+            document.querySelector(".close").addEventListener("click", () => {
+              alertbox.style.display = "none";
+            });
+          } else {
+            alertbox.style.display = "block";
+            // alertbox.textContent = "비밀번호를 입력하세요";
+            alertbox.innerHTML = `비밀번호를 입력하세요 <span class="close">X</span>`;
+            document.querySelector(".close").addEventListener("click", () => {
+              alertbox.style.display = "none";
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

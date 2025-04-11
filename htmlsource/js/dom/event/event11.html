@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div * {
+        padding: 10px;
+        margin: 10px;
+      }
+      [readonly] {
+        background: lightgray;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>숫자 맞추기</h2>
+    <p>
+      컴퓨터가 생성한 숫자를 맞추는 게임입니다. <br />
+      숫자는 1 ~ 100 사이에 있습니다.
+    </p>
+    <div>
+      <label>
+        숫자
+        <input type="text" name="num1" id="num1" size="5" />
+        <button type="button">확인</button>
+        <!-- <button type="button">초기화</button> -->
+      </label>
+    </div>
+    <div>
+      <label>
+        추측횟수
+        <input type="text" name="count" id="count" size="5" readonly />
+      </label>
+    </div>
+    <div>
+      <label>
+        힌트
+        <input type="text" name="hint" id="hint" readonly />
+      </label>
+    </div>
+    <script>
+      // 입력숫자와 컴퓨터 임의의 숫자 비교
+
+      const btn = document.querySelector("button");
+      let count = 0;
+      // 컴퓨터 임의의 숫자 구하기 (1~100사이)
+      const random = Math.floor(Math.random() * 100) + 1;
+      btn.addEventListener("click", () => {
+        // 추측횟수 +1 : 화면에 보여주기
+        count += 1;
+        document.querySelector("#count").value = count;
+
+        // 임의의 숫자 확인용 콘솔에만출력
+        console.log(random);
+        // 확인을 누르면 사용자가 입력한 숫자 가져오기
+        let usernum = document.querySelector("#num1");
+        // 힌트출력
+        let result = document.querySelector("#hint");
+
+        // 입력숫자 < 컴퓨터 : 더 큰 숫자입니다 (힌트에보여주기)
+        // 입력숫자 > 컴퓨터 : 더 작은 숫자입니다 (힌트에보여주기)
+        // 입력숫자 == 컴퓨터 : 정답입니다 (힌트에보여주기)
+        if (usernum.value == random) {
+          result.value = "정답입니다";
+          btn.disabled = "true"; // 정답이면 비활성화
+        } else if (usernum.value > random) {
+          result.value = "더 작은 수입니다";
+        } else {
+          result.value = "더 큰 수 입니다";
+        }
+      });
+    </script>
+  </body>
+</html>

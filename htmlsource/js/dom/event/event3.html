@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* #target {
+        background-color: lightblue;
+      } */
+    </style>
+  </head>
+  <body id="target">
+    <div>
+      <input type="radio" name="color" id="" value="lightblue" />파랑
+      <input type="radio" name="color" id="" value="green" />녹색
+    </div>
+    <script>
+      // 파랑 radio 클릭되면 body 배경색을 파랑으로
+      // 녹색 radio 클릭되면 body 배경색을 녹색으로
+      //   const rad1 = document.querySelector("div input:nth-of-type(1)");
+      //   const rad2 = document.querySelector("div input:nth-of-type(2)");
+      //   const body = document.querySelector("#target");
+      //   //   const rad1Click = () => {
+      //   //     body.style.background = "blue";
+      //   //   };
+
+      //   //   const rad2Click = () => {
+      //   //     body.style.background = "green";
+      //   //   };
+
+      //   //   rad1.addEventListener("click", rad1Click);
+      //   //   rad2.addEventListener("click", rad2Click);
+
+      function changeColor(color) {
+        document.body.style.backgroundColor = color;
+      }
+      //   // function을 호출하지않고 연결하는개념이기에 () => 함수명() 형태가 아니면 함수명만 단독으로 사용해야함
+      //   //   rad1.addEventListener("click", () => changeColor("lightblue"));
+      //   //   rad2.addEventListener("click", () => changeColor("green"));
+
+      //   rad1.addEventListener("click", (e) => {
+      //     const value = e.target.value;
+      //     console.log(value);
+      //     changeColor(e.target.value);
+      //   });
+      //   rad2.addEventListener("click", (e) => {
+      //     const value = e.target.value;
+      //     console.log(value);
+      //     changeColor(e.target.value);
+      //   });
+      //   rad1.addEventListener("click", () => {
+      //     body.style.backgroundColor = "blue";
+      //   });
+
+      //   rad2.addEventListener("click", () => {
+      //     body.style.background = "green";
+      //   });
+
+      // 이벤트 버블링 : 라디오 클릭 시 부모한테 이벤트 전달됨
+      const colorNode = document.querySelector("div");
+      colorNode.addEventListener("click", (e) => changeColor(e.target.value));
+    </script>
+  </body>
+</html>

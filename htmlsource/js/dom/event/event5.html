@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <button type="button">Turn on the light</button>
+      <img src="./pic_bulboff.gif" alt="" />
+      <button type="button">Turn off the light</button>
+    </div>
+    <script>
+      // Turn on the light 클릭 시 img src변경 : "./pic_bulbon.gif"
+      // Turn off the light 클릭 시 img src변경 : "./pic_bulboff.gif"
+
+      //   const on = document.querySelector("button:first-of-type");
+      //   on.addEventListener("click", () => {
+      //     const img = document.querySelector("img");
+      //     img.src = "./pic_bulbon.gif";
+      //   });
+
+      //   const off = document.querySelector("button:last-of-type");
+      //   off.addEventListener("click", () => {
+      //     const img = document.querySelector("img");
+      //     img.src = "./pic_bulboff.gif";
+      //   });
+
+      //   const btns = document.querySelectorAll("button");
+      const img = document.querySelector("img");
+      //   btns[0].addEventListener("click", () => (img.src = "./pic_bulbon.gif"));
+      //   btns[1].addEventListener("click", () => (img.src = "./pic_bulboff.gif"));
+
+      // 이벤트 버블링으로 처리
+      const div = document.querySelector("div");
+      div.addEventListener("click", (e) => {
+        // 이벤트가 자식중 어느요소에서 왔는지 찾아야함 (id, class, name 등 이용가능)
+        // console.log(e.target.textContent);
+        // console.log(typeof e.target.textContent);
+        // string => string 객체 메소드 이용가능
+        if (e.target.textContent.includes("on")) {
+          img.src = "./pic_bulbon.gif";
+        } else {
+          img.src = "./pic_bulboff.gif";
+        }
+      });
+    </script>
+  </body>
+</html>
